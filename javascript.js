@@ -9,4 +9,5 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice())
+let getHumanChoice = prompt('What will it be? Rock? Paper? or Scissors?');
+
