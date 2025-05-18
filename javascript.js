@@ -9,8 +9,18 @@ function getComputerChoice() {
     }
 }
 
-let getHumanChoice = prompt('What will it be? Rock? Paper? or Scissors?');
+function getHumanChoice () {
+    let humanChoice = prompt('What will you choose?')   
 
-let humanScore = 0;
-let getComputerChoice = 0;
+    if(humanChoice.toLowerCase() == 'rock') {
+    return 'rock'
+    } else if (humanChoice.toLowerCase() == 'paper') {
+    return 'paper'
+    } else if (humanChoice.toLowerCase() == 'scissors') {
+    return 'scissors'
+    } else {
+    console.log("No input was chosen")
+    }
+}
 
+console.log(getHumanChoice())
