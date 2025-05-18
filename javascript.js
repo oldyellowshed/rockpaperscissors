@@ -29,24 +29,30 @@ let computerScore = 0;
 function playRound(humanChoice, computerChoice) {
     if (humanChoice == 'rock' && computerChoice == 'paper') {
     console.log('You lose paper wins')
+    ++computerScore
     } else if (humanChoice == 'rock' && computerChoice == 'rock') {
     console.log('DRAW')
     } else if (humanChoice == 'rock' && computerChoice == 'scissors') {
     console.log('You win, rock wins')
+    ++humanScore
     }
 
      if (humanChoice == 'paper' && computerChoice == 'paper') {
     console.log('DRAW')
     } else if (humanChoice == 'paper' && computerChoice == 'rock') {
     console.log('You win, paper beats rock')
+    ++humanScore
     } else if (humanChoice == 'paper' && computerChoice == 'scissors') {
     console.log('you lose scissors beat paper')
+    ++computerScore
     }
 
     if (humanChoice == 'scissors' && computerChoice == 'paper') {
     console.log('You beat him, scissors shreds paper')
+    ++humanScore
     } else if (humanChoice == 'scissors' && computerChoice == 'rock') {
     console.log('You lose, rock destroys scissors')
+    ++computerScore
     } else if (humanChoice == 'scissors' && computerChoice == 'scissors') {
     console.log('draw, i wanna see you two scissor')
     }
