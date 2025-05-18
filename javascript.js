@@ -1,15 +1,15 @@
 function getComputerChoice() {
     let getNumber = Math.floor(Math.random() * 3); 
     if (getNumber == 0) {
-    return 'Rock';
+    return 'rock';
     } else if (getNumber == 1) {
-    return 'Paper';
+    return 'paper';
     } else {
-    return'Scissors';
+    return'scissors';
     }
 }
 
-function getHumanChoice () {
+function getHumanChoice() {
     let getChoice = prompt('What will you choose?')   
 
     if(getChoice.toLowerCase() == 'rock') {
@@ -26,6 +26,33 @@ function getHumanChoice () {
 let humanScore = 0;
 let computerScore = 0;
 
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice == 'rock' && computerChoice == 'paper') {
+    console.log('You lose paper wins')
+    } else if (humanChoice == 'rock' && computerChoice == 'rock') {
+    console.log('DRAW')
+    } else if (humanChoice == 'rock' && computerChoice == 'scissors') {
+    console.log('You win, rock wins')
+    }
 
+     if (humanChoice == 'paper' && computerChoice == 'paper') {
+    console.log('DRAW')
+    } else if (humanChoice == 'paper' && computerChoice == 'rock') {
+    console.log('You win, paper beats rock')
+    } else if (humanChoice == 'paper' && computerChoice == 'scissors') {
+    console.log('you lose scissors beat paper')
+    }
 
+    if (humanChoice == 'scissors' && computerChoice == 'paper') {
+    console.log('You beat him, scissors shreds paper')
+    } else if (humanChoice == 'scissors' && computerChoice == 'rock') {
+    console.log('You lose, rock destroys scissors')
+    } else if (humanChoice == 'scissors' && computerChoice == 'scissors') {
+    console.log('draw, i wanna see you two scissor')
+    }
+}
 
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
