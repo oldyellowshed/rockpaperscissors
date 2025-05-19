@@ -66,6 +66,12 @@ playRound(getHumanChoice(), getComputerChoice());
 playRound(getHumanChoice(), getComputerChoice());
 playRound(getHumanChoice(), getComputerChoice());
 
+if (humanScore > computerScore) {
+    console.log('Human wins 🧑') 
+} else {
+    console.log('Computer wins 💻')
+}
+
 }
 
 playGame()
