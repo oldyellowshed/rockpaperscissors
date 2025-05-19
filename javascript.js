@@ -10,7 +10,7 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let getChoice = prompt('What will you choose?')   
+    let getChoice = prompt('What will you choose? Rock? Paper? Scissors?')   
 
     if(getChoice.toLowerCase() == 'rock') {
     return 'rock'
